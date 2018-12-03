@@ -130,13 +130,22 @@ public class CRUD extends javax.swing.JFrame {
         jTextField_Jurusan = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jTextField_Email = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("NIM :");
+        jLabel1.setBorder(new javax.swing.border.MatteBorder(null));
 
+        jLabel2.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Nama :");
+        jLabel2.setBorder(new javax.swing.border.MatteBorder(null));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -192,16 +201,42 @@ public class CRUD extends javax.swing.JFrame {
         });
 
         jLabel3.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel3.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Alamat :");
+        jLabel3.setBorder(new javax.swing.border.MatteBorder(null));
 
+        jLabel4.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Tanggal Lahir :");
+        jLabel4.setBorder(new javax.swing.border.MatteBorder(null));
 
         jLabel5.setBackground(new java.awt.Color(51, 255, 51));
+        jLabel5.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("JK :");
+        jLabel5.setBorder(new javax.swing.border.MatteBorder(null));
 
+        jLabel6.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Jurusan :");
+        jLabel6.setBorder(new javax.swing.border.MatteBorder(null));
 
+        jLabel7.setFont(new java.awt.Font("DialogInput", 1, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Email :");
+        jLabel7.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jScrollPane2.setBackground(new java.awt.Color(153, 255, 153));
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("DialogInput", 1, 18)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(0, 153, 51));
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Aplikasi Data Mahasiswa STIKI Menggunakan ArrayList");
+        jScrollPane2.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,13 +244,6 @@ public class CRUD extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jButton1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(86, 86, 86)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -246,18 +274,33 @@ public class CRUD extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(31, 31, 31)
-                                .addComponent(jTextField_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jTextField_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3)))
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 12, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextField_NIM, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE))
@@ -285,13 +328,12 @@ public class CRUD extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jTextField_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
+                            .addComponent(jButton3)
                             .addComponent(jButton2)
-                            .addComponent(jButton3))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jButton1))))
+                .addGap(51, 51, 51))
         );
 
         pack();
@@ -304,9 +346,17 @@ public class CRUD extends javax.swing.JFrame {
         executeSQlQuery(query, "Inserted");
     }//GEN-LAST:event_jButton1ActionPerformed
 
+
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String query = "UPDATE `mhs` SET `nama`='" + jTextField_Nama.getText() + "',`alamat`='" + jTextField_Alamat.getText() + "',`tgl_lahir`=" + jTextField_TglLhr.getText() + "',`jk`=" + jTextField_JK.getText() + "',`jurusan`=" + jTextField_Jurusan.getText() + "',`email`=" + jTextField_Email.getText() + " WHERE `nim` = " + jTextField_NIM.getText();
+        String query = "UPDATE mhs SET nim='" + jTextField_NIM.getText()+"',nama='" + jTextField_Nama.getText()+"',alamat='"
+                + jTextField_Alamat.getText() + "',tgl_lahir='"
+                + jTextField_TglLhr.getText() + "',jk='"
+                 + jTextField_JK.getText() + "',jurusan='"
+                + jTextField_Jurusan.getText() + "',email='"
+                 + jTextField_Email.getText() + "' WHERE nim ='" + jTextField_NIM.getText()+"'";
         executeSQlQuery(query, "Updated");
+       // SelectData();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -389,7 +439,9 @@ public class CRUD extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField_Alamat;
     private javax.swing.JTextField jTextField_Email;
     private javax.swing.JTextField jTextField_JK;
