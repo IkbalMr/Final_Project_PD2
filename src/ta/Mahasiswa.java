@@ -53,6 +53,11 @@ public class Mahasiswa {
         return jurusan;
     }
     
+    public void setJurusan(String jurusan)
+    {
+        this.jurusan = jurusan;
+    }
+    
     public String getEmail()
     {
         return email;
