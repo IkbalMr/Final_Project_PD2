@@ -29,7 +29,7 @@ public class CRUD extends javax.swing.JFrame {
         initComponents();
         Show_Mhs_In_JTable();
     }
-    
+
     // get the connection
     public Connection getConnection() {
         Connection con;
@@ -41,7 +41,6 @@ public class CRUD extends javax.swing.JFrame {
             return null;
         }
     }
-    
 
     // get a list of users from mysql database
     public ArrayList<Mahasiswa> getMhsList() {
@@ -371,32 +370,36 @@ public class CRUD extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String query = "INSERT INTO `mhs`(`nama`, `alamat`, `tgl_lahir`, `jk`, `jurusan`, `email`) VALUES ('" 
-                + jTextField_Nama.getText() 
-                + "','" + jTextField_Alamat.getText() 
-                + "','" + jTextField_TglLhr.getText()
+        String query = "INSERT INTO `mhs`(`nim`,`nama`, `alamat`, `tgl_lahir`, `jk`, `jurusan`, `email`) VALUES ('"
+                + jTextField_NIM.getText()
+                + "','" + jTextField_Nama.getText()
+                + "','" + jTextField_Alamat.getText()
+//                + "','" + jDateChooser1.getDate()
+                                + "','" + jTextField_TglLhr.getText()
                 + "','" + buttonGroup1.getSelection().getActionCommand()
-//                + "','" + jTextField_JK.getText() 
+                //                + "','" + jTextField_JK.getText() 
                 + "','" + jComboBox1.getSelectedItem()
-//                + "','" + jTextField_Jurusan.getText() 
+                //                + "','" + jTextField_Jurusan.getText() 
                 + "','" + jTextField_Email.getText() + "');";
 
         executeSQlQuery(query, "Inserted");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
-    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String query = "UPDATE mhs SET nim='" + jTextField_NIM.getText()+"',nama='" + jTextField_Nama.getText()+"',alamat='"
+        String query = "UPDATE mhs SET nim='"
+                + jTextField_NIM.getText() + "',nama='"
+                + jTextField_Nama.getText() + "',alamat='"
                 + jTextField_Alamat.getText() + "',tgl_lahir='"
-                + jTextField_TglLhr.getText() + "',jk='"
+//                + jDateChooser1.getDate() + "',jk='"
+                                + jTextField_TglLhr.getText() + "',jk='"
                 + buttonGroup1.getSelection().getActionCommand() + "',jurusan='"
-//                 + jTextField_JK.getText() + "',jurusan='"
+                //                 + jTextField_JK.getText() + "',jurusan='"
                 + jComboBox1.getSelectedItem() + "',email='"
-//                + jTextField_Jurusan.getText() + "',email='"
-                 + jTextField_Email.getText() + "' WHERE nim ='" + jTextField_NIM.getText()+"'";
+                //                + jTextField_Jurusan.getText() + "',email='"
+                + jTextField_Email.getText() + "' WHERE nim ='" + jTextField_NIM.getText() + "'";
         executeSQlQuery(query, "Updated");
-       // SelectData();
+        // SelectData();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -420,16 +423,13 @@ public class CRUD extends javax.swing.JFrame {
 
         jTextField_Alamat.setText(model.getValueAt(i, 2).toString());
 
+//        jDateChooser1.setDateFormatString(model.getValueAt(i, 3).toString());
         jTextField_TglLhr.setText(model.getValueAt(i, 3).toString());
-        
 //        buttonGroup1.setSelected((ButtonModel) model.getValueAt(i, 4), rootPaneCheckingEnabled);
-
 //        jTextField_JK.setText(model.getValueAt(i, 4).toString());
-        
         jComboBox1.setSelectedItem(model.getValueAt(i, 5).toString());
 
 //        jTextField_Jurusan.setText(model.getValueAt(i, 5).toString());
-
         jTextField_Email.setText(model.getValueAt(i, 6).toString());
     }//GEN-LAST:event_jTable1MouseClicked
 
@@ -440,7 +440,7 @@ public class CRUD extends javax.swing.JFrame {
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton1ActionPerformed
-    
+
     /**
      * @param args the command line arguments
      */
@@ -476,8 +476,7 @@ public class CRUD extends javax.swing.JFrame {
             }
         });
     }
-        
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
@@ -506,4 +505,3 @@ public class CRUD extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField_TglLhr;
     // End of variables declaration//GEN-END:variables
 }
-              
